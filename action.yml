@@ -18,12 +18,12 @@ runs:
       uses: actions/setup-python@v4
       with:
         python-version: '3.10'
-    - name: Install dependencies
+    - name: Install Dependencies
       run: pip install -r requirments.txt
       shell: bash
-    - name: Pass inputs to shell
+    - name: Pass Inputs to Shell
       run:
-        echo "Input_NUM=${{inputs.num}}" >> $GITHUB_ENV
+        echo "Input_NUM=${{ inputs.num }}" >> $GITHUB_ENV
       shell: bash
     - name: Fetch the number's square
       id: get-square
